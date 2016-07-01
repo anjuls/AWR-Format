@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title></title>
+</head>
+
+<body style="font-family: Arial,Helvetica,sans-serif">
+<h1>AWR Formatter</h1>
+
+<p></p>
+
+<h2>Primary Features</h2>
+<ol>
+  <li>Convert hard to read sizes such as "reads" and "gets" to KB / MB / GB /
+    TB.</li>
+  <li>Convert hard to read times such as thousands of seconds to hours /
+    minutes / seconds.</li>
+  <li>Link common wait events to their definitions. A local copy of the
+    definitions is included so internet access is not necessary.</li>
+  <li>Large HTML tables of data are sortable and searchable. </li>
+  <li>Top SQL by <em>Elapsed</em>, <em>Reads</em>, <em>Gets</em>, and
+    <em>Executions</em> are combined into one table. </li>
+  <li>A SQL Popup that is called when you click on any SQL in the report. This
+    shows the SQL with several formatting options, including the option for
+    syntax highlighting to make it easier to read. New tabs were added in
+    version 1.6:
+    <ul>
+      <li><strong>Query Plan</strong>: Shows the statement to execute to query
+        the AWR repository and return the plan for this SQL statement.</li>
+      <li><strong>Color SQL:</strong> This shows the statement to execute to
+        "color" a SQL statement. Once a statement is colored, it will always
+        show up in the AWR report, regardless of whether it's in the top n SQL
+        or not.</li>
+      <li><strong>AWR SQL Report</strong>: Shows the statement to execute to
+        generate an AWR report for a single query. </li>
+    </ul>
+  </li>
+  <li>A tabbed interface is added to the top to surface key information. The
+    tabs include:
+    <ul>
+      <li><strong>Overview</strong>: A concise list of key attributes and
+      values</li>
+      <li><strong>Top SQL Combined</strong></li>
+      <li><strong>Top Events</strong>: Data from the Top Events sections, such
+        as Top 5 Timed Foreground Events, are shown together in one tab.
+        Metrics below a certain threshold, such as less than 2% of DB Time, are
+        filtered.</li>
+      <li><strong>Memory</strong></li>
+      <li><strong>Observations</strong>: Certain metrics and values are worth
+        additional investigation. These could include the use of undocumented
+        parameters or an AWR Report that spans a period of time greater than 60
+        minutes. The observations are listed here and are also emphasized on
+        the report with a red icon.</li>
+      <li><strong>IO Graphs</strong></li>
+    </ul>
+  </li>
+  <li>Each HTML table offers "CSV Export"</li>
+</ol>
+
+<p></p>
+
+<h2>Version History</h2>
+
+<h3>1.6</h3>
+<ul>
+  <li>Performance increased by 3x in rendering large AWR reports.</li>
+  <li>Added new tabs to SQL Popup for Query Plan, Color SQL, and AWR SQL
+  Report</li>
+</ul>
+</body>
+</html>

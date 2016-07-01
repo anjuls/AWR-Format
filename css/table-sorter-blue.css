@@ -1,0 +1,40 @@
+/* tables */
+table.tablesorter {
+	font-family:arial;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #0066cc;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+	padding-right:8px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(chrome-extension://agejgflogmnnkmojpnmfladhplamhhnb/images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	margin-right: -5px;
+	cursor: pointer;
+}
+
+table.tablesorter tbody td {
+	padding: 2px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr:nth-child(odd) td {
+	background-color:#ffffcc;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(chrome-extension://agejgflogmnnkmojpnmfladhplamhhnb/images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(chrome-extension://agejgflogmnnkmojpnmfladhplamhhnb/images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #cccc00;
+color: #000;
+}

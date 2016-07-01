@@ -1,0 +1,30 @@
+{
+  "name": "AWR Format",
+  "author": "Tyler D. Muth",
+  "version": "2",
+  "manifest_version":2,
+  "icons": { "32": "images/icon.png" },
+  "update_url": "http://dl.dropbox.com/u/4131944/AWR-Format/updates.xml",
+  "page_action": {
+    "default_icon": "images/icon.png", // optional
+    "default_title": "AWR Report Formatter"    // optional; shown in tooltip
+    // "default_popup": "popup.html"    // optional
+	},
+  "permissions": [
+    "tabs","file://*"
+  ],
+   "content_scripts" : [{ 
+    "matches" : [ "file://*" ], 
+    "js" : [ "js-libraries/jquery-1.6.2.min.js","js-libraries/jquery-ui-1.8.10.custom.min.js","js-libraries/picnet.table.filter.min.js",
+			 "js-libraries/jquery.tablesorter.min.js","js-libraries/jquery.tipsy.js",
+			 "js-libraries/shCore.js","js-libraries/shBrushSql.js","js-libraries/jquery.beautyOfCode.js",
+			 "js-libraries/jquery.flot.min.js","js-libraries/jstat-1.0.0.min.js","js-libraries/jquery.flot.selection.min.js",
+			 "js-libraries/jstat-core.js","js-libraries/jstat-distribution.js","js-libraries/jstat-special.js",
+			 "js-libraries/table2CSV.js",
+		     "db-stat-defs/db-stat-defs.js","db-stat-defs/idle-wait-events.js","db-stat-defs/custom-definitions.js","db-stat-defs/enque-defs.js",
+			 "utility-functions.js","awr-format.js" ],
+	"css" : ["css/jquery-ui-1.8.10.custom.css","css/table-sorter-blue.css","css/tipsy.css",
+			 "css/shCore.css","css/shThemeDefault.css",
+			 "css/awr-format.css"]
+  }]
+}

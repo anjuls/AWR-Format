@@ -1,0 +1,135 @@
+span.report-title{color:#fff;font-weight:bold;font-size:14pt;position:absolute;left:15px;top:10px;display:block;}
+#aboutSection{font-size:10pt;font-weight:normal;}
+
+#reportType,#reportPrefs{color:#ffffcc;font-size:8pt;}
+#reportPrefs{margin-left:15px;position:absolute;bottom:5px;right:10px;}
+#reportPrefs span,#reportType span{font-size:11pt;color:#fff;}
+#reportPrefs input{margin-left:20px;}
+a.custom-showstats{text-decoration:underline;color:#cccccc !important;font-weight:normal !important;font-size:7pt !important;display:block !important;}
+
+#initialFormatMenu{position:relative;}
+#topButtons{position:absolute;right:10px;top:10px;display:block;}
+#reportType{position:absolute;left:15px;bottom:10px;display:block;}
+
+div#customSummary{width:98%;margin:25px;border:2px #777777 solid;font-size:10pt;padding:10px;}
+
+table.custom-summary-tab{border-collapse:collapse}
+table.custom-summary-tab td{border:1px #efefef solid;padding:3px;}
+
+
+td.customSumLeft{font-weight:normal;font-size:8pt;}
+td.customSumRight{font-weight:bold;font-size:8pt;}
+
+span.bytePrettyPrint{font-size:7pt;color:#444444;padding-left:5px;}
+
+
+
+
+
+#sqlStatsCombined td{border:1px #efefef solid;padding:2px;font-size:8pt;text-align:right;white-space:nowrap;}
+/* #sqlStatsCombined th{font-size:8pt;vertical-align:bottom;padding:4px;font-weight:normal;color:#ffffff;background-color:#0066cc;border:1px #cccccc solid;white-space:wrap;} */
+#sqlStatsCombined th{white-space:wrap;color:#ffffff;}
+
+#sqlStatsCombined td{font-size:8pt;text-align:right;white-space:nowrap;padding-right:2px;padding-left:1px;border-right:1px solid #bbbbbb;}
+#sqlStatsCombined{}
+#sqlStatsCombined td.sqlcenter{text-align:center;}
+#sqlStatsCombined td.sqlid{text-align:left;}
+#sqlStatsCombined td.tiny{font-size:7pt;}
+
+#sqlStatsCombined tr:hover{background-color:#ffffcc}
+#sqlStatsCombined input.filter{width:20px;}
+
+#sqlStatsCombined th{font-size:8pt;vertical-align:bottom;font-weight:normal;}
+#sqlStatsCombined_wrapper{margin-top:40px;}
+
+
+th.ui-state-default{
+    color: #2E6E9E;
+    font-size: 9pt;
+    font-weight: normal;
+	vertical-align:bottom
+}
+
+td.number-convert-tooltip,td.smart-number{color:#a85306 !important;font-weight:bold !important;cursor:pointer}
+
+#sqlStatsCombined  tr.odd{background-color:#eaf4fd}
+
+td.awrsqltext,div.awr-custom-sqltext,td.sqlidlink{text-decoration:underline;cursor:pointer;color:blue;}
+
+div.sqltextdisplay{font-family:courier;font-size:9pt;}
+
+
+.ui-jqgrid tr.ui-row-ltr td {empty-cells: show;}
+
+
+a.customlink{font-size:8pt;color:blue;text-decoration:underline;cursor:pointer;} 
+a.customlink:hover{color:red;}
+
+a.customlink-inactive{font-size:8pt;color:#cccccc;text-decoration:none;cursor:default;} 
+a.customlink-inactive:hover{color:#cccccc;}
+
+
+
+div.topstat-title{margin-top:30px;color:#369}
+
+
+#sqlCrosstabTableTitle{font-weight:bold;color:#369}
+
+#sqlCrosstabTable{border-collapse:collapse;}
+#sqlCrosstabTable td,#sqlCrosstabTable th{border:1px #bbbbbb solid;font-size:8pt;padding:4px;}
+#sqlCrosstabTable td.row-title{font-weight:bold;}
+
+div.doclink-wrapper{position:relative;width:100%;height:100%;}
+span.arw-custom-documentation-link,span.arw-custom-mos-link{position:absolute;top:0px;right:4px;width:15px;}
+span.arw-custom-idle-wait2{position:absolute;top:0px;right:8px;width:15px;background-image: url(chrome-extension://agejgflogmnnkmojpnmfladhplamhhnb/images/ui-icons_6da8d5_256x240.png)}
+span.arw-custom-idle-wait{position:absolute;top:0px;right:20px;width:15px;background-image: url(chrome-extension://agejgflogmnnkmojpnmfladhplamhhnb/images/ui-icons_6da8d5_256x240.png)}
+#statdesc{font-weight:normal;font-size:10pt;}
+
+
+table.number-convert-table{font-size:10pt;border-collapse:collapse}
+table.number-convert-table tr td:nth-child(1) {font-weight:bold;}
+
+table.number-convert-table td,table.number-convert-table th{border:1px #bbbbbb solid;}
+
+tr.size-factor-1 td{background-color:#9dfda9}
+tr.size-factor-worse td{background-color:#e17009}
+tr.size-factor-better td{background-color:#9dfda9}
+#customObservations{font-weight:normal;font-size:9pt;}
+span.observation-object{font-weight:bold;color:#369;font-family:courier;}
+span.observation-sql-id{text-decoration:underline;cursor:pointer;color:blue;font-family:courier;}
+span.sql-keyword{font-weight:bold;color:#369}
+#sqltextdisplaydiv,#sqltextdisplaydiv pre{width:800px;white-space:wrap;}
+
+div.sqltextdisplayControl{font-size:9pt;}
+#sytaxradio{margin-left:50px;}
+
+table.custom-awr-table,table.custom-awr-table-non-tagged {border-collapse:collapse;border:1px #97b7ca solid;}
+table.custom-awr-table td,table.custom-awr-table th,table.custom-awr-table-non-tagged td,table.custom-awr-table-non-tagged th{border:1px #97b7ca solid;padding:3px;}
+
+table.tablesorter thead tr .header{padding-right:30px !important;vertical-align:bottom !important;border: 1px solid #97B7CA !important;}
+
+table.custom-awr-table thead tr td.column-header-blank{border:0px;}
+td.header-colspan{background-color:#06C;color:#fff !important;border: 1px solid #97B7CA;font-size:8pt;font-weight:bold;}
+
+tr.hover td,td.hover{ background-color: #ffff55 !important; }
+
+
+div.observation{position:relative;width:100%;height:100%;}
+/* span.observation-icon{width: 16px; height: 16px; background-image: url(chrome-extension://agejgflogmnnkmojpnmfladhplamhhnb/images/ui-icons_cd0a0a_256x240.png) !important; background-position: 0 -144px  !important; } */
+span.observation-icon{width: 16px; height: 16px; position:absolute;top:0px;left:-20px;background-image: url(chrome-extension://agejgflogmnnkmojpnmfladhplamhhnb/images/ui-icons_cd0a0a_256x240.png);background-position: 0 -144px;}
+
+.ui-button-text {padding:3px 4px;font-size:9pt;}
+
+#ioStatRowDetails1,#ioStatRowDetails2{margin-bottom:50px;margin-top:15px;}
+div.tickLabel{padding-right:20px !important;}
+
+
+span.smart-cell-title{}
+span.smart-cell-title-strike-through{color:#888888;font-style:italic}
+span.table-to-csv-container{text-align:left;}
+span.table-to-csv-container a{font-size:7pt;}
+
+p.normal-text{font-size:10pt;font-weight:normal}
+#moreDetails{padding-left:20px;font-size:9pt}
+#moreDetails a,#moreDetails a:visited{color:#c5dbec;text-decoration:none;}
+#moreDetails a:hover{color:#ffffff;text-decoration:underline;}
