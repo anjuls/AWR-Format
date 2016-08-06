@@ -87,6 +87,7 @@ function determineReportType(){
 			var hostHeaderCells=new Object;
 			getHeaderCells(hostTable,hostHeaderCells);
 			awrRpt.platform=getCellByHeaderName($(hostTable).find('tr:has(td)'),hostHeaderCells,"Platform").text();
+			awrRpt.dbHostName = $(getCellByHeaderName(instanceTblRow,instanceTblHeaderCells,'Host Name')).text();
 		}
 				
 		if((cellPhysIoInterconnectBytes.length > 1) && (awrRpt.platform.indexOf('Linux') >= 0)){
@@ -750,7 +751,7 @@ function generateSummary(){
 	awrRpt.blockSize=$("td:contains('Std Block Size:')").first().next('td').text();
 	awrRpt.blockSizeKb=parseInt(awrRpt.blockSize.replace(/\k/g,''));
 	
-	tempObj = $("td:contains('Logical reads:')").first().next('td');
+	tempObj = $("td:contains('Logical read (blocks):')").first().next('td');
 	awrRpt.logicalBlockReadsSec=parseFloat($(tempObj).text().replace(/\,/g,''));
 	addSmartNumberToCell($(tempObj),'gets');
 	addSmartNumberToCell($(tempObj).next('td'),'gets');
@@ -761,7 +762,7 @@ function generateSummary(){
 	awrRpt.physicalWritesXBSec=bytePrettyPrint($("td:first-child:contains('physical write total bytes')").first().next('td').next('td').text());
 	
 	var instanceActivitySectionObj = new Object;
-	getSectionByName('Instance Activity Stats',instanceActivitySectionObj);
+	getSectionByName('Other Instance Activity Stats',instanceActivitySectionObj); 
 	
 	awrRpt.physicalReadTotReqSec=$(instanceActivitySectionObj.table).find("td:first-child:contains('physical read total IO requests')").first().next('td').next('td').text();
 	awrRpt.physicalWriteTotReqSec=$(instanceActivitySectionObj.table).find("td:first-child:contains('physical write total IO requests')").first().next('td').next('td').text();
@@ -786,17 +787,17 @@ function generateSummary(){
 	if(awrRpt.racDB==='YES'){awrRpt.racNumInstances=$("td:contains('Number of Instances:')").first().next('td').text();}
 	
 	
-	tempObj=$("td:contains('Redo size:')").first().next('td');
+	tempObj=$("td:contains('Redo size (bytes):')").first().next('td');
 	var redoSize = $(tempObj).text().replace(/\,/g,'');
 	awrRpt.redoReadsXBSec=bytePrettyPrint(redoSize);
 	addSmartNumberToCell($(tempObj),'bytes');
 	addSmartNumberToCell($(tempObj).next('td'),'bytes');
 	
-	tempObj=$("td:contains('Physical reads:')").first().next('td');
+	tempObj=$("td:contains('Physical read (blocks):')").first().next('td');
 	addSmartNumberToCell($(tempObj),'gets');
 	addSmartNumberToCell($(tempObj).next('td'),'gets');
 	
-	tempObj=$("td:contains('Physical writes:')").first().next('td');
+	tempObj=$("td:contains('Physical write (blocks):')").first().next('td');
 	addSmartNumberToCell($(tempObj),'gets');
 	addSmartNumberToCell($(tempObj).next('td'),'gets');
 	
@@ -813,6 +814,7 @@ function generateSummary(){
 	awrRpt.OScpuBusyPct=((cpuBusyTime/(cpuBusyTime+cpuIdleTime))*100).toFixed(1);
 	
 	awrRpt.DbTimePerSecPerCPU = (parseFloat(awrRpt.DbTimePerSec) / awrRpt.OSnumCPUs).toFixed(1);	
+	awrRpt.DbTimePerSecPerCore = (parseFloat(awrRpt.DbTimePerSec) / awrRpt.OSnumCPUcores).toFixed(1);	
 	
 	
 	$('#customSummary').remove();
@@ -840,6 +842,7 @@ function generateSummary(){
 	summaryDbInfo += genSumRow('DB Time (minutes)',awrRpt.DbTimeMin,'need-smart-number');
 	summaryDbInfo += genSumRow('DB Time per Second',awrRpt.DbTimePerSec);
 	summaryDbInfo += genSumRow('DB Time per Second per CPU',awrRpt.DbTimePerSecPerCPU);
+	summaryDbInfo += genSumRow('DB Time per Second per Core',awrRpt.DbTimePerSecPerCore);
 	summaryDbInfo += genSumRow('<br />','<br />');
 
 		
